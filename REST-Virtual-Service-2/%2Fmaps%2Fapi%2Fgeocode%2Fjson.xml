@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:restMockAction name="/maps/api/geocode/json" method="GET" resourcePath="/maps/api/geocode/json" id="9c70a8e0-450c-4338-82c4-3ca2bc418fd7" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="9c70a8e0-450c-4338-82c4-3ca2bc418fd7fileName">%2Fmaps%2Fapi%2Fgeocode%2Fjson</con:setting></con:settings><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchConfig/><con:dispatchXPath/><con:parameterDispatcherRuleContainer><con:ParameterDispatcherRule><con:ruleName>address=melbourne</con:ruleName><con:parameterDispatcherCondition><con:parameterType>QUERY</con:parameterType><con:parameterOperationType>EQUALS</con:parameterOperationType><con:parameterName>address</con:parameterName><con:parameterValue>melbourne</con:parameterValue></con:parameterDispatcherCondition><con:responseName>For address=melbourne</con:responseName></con:ParameterDispatcherRule><con:ParameterDispatcherRule><con:ruleName>address=sydney</con:ruleName><con:parameterDispatcherCondition><con:parameterType>QUERY</con:parameterType><con:parameterOperationType>EQUALS</con:parameterOperationType><con:parameterName>address</con:parameterName><con:parameterValue>sydney</con:parameterValue></con:parameterDispatcherCondition><con:responseName>For address=sydney</con:responseName></con:ParameterDispatcherRule><con:ParameterDispatcherRule><con:ruleName>address=galway</con:ruleName><con:parameterDispatcherCondition><con:parameterType>QUERY</con:parameterType><con:parameterOperationType>EQUALS</con:parameterOperationType><con:parameterName>address</con:parameterName><con:parameterValue>galway</con:parameterValue></con:parameterDispatcherCondition><con:responseName>For address=galway</con:responseName></con:ParameterDispatcherRule></con:parameterDispatcherRuleContainer><con:routeEnabled>true</con:routeEnabled><con:conditionalRoutingEnabled>false</con:conditionalRoutingEnabled><con:routeScript/><con:saveRoutedResponse>true</con:saveRoutedResponse><con:response name="Response 1" id="9c55fabf-bf97-42d3-a400-1228e6c6010f" httpResponseStatus="200" dataSource=""><con:settings/><con:responseContent/></con:response><con:response name="For address=melbourne" id="91a7c7ac-2d50-45ce-afb3-5272af05b926" httpResponseStatus="200" mediaType="application/json" encoding="UTF-8" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource="Data Source 1"><con:settings/><con:responseContent>{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "${#MockResponse#city}",
+               "short_name" : "Melbourne",
+               "types" : [ "colloquial_area", "locality", "political" ]
+            },
+            {
+               "long_name" : "Victoria",
+               "short_name" : "VIC",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "Australia",
+               "short_name" : "AU",
+               "types" : [ "country", "political" ]
+            }
+         ],
+         "formatted_address" : "Melbourne VIC, Australia",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : -37.5112737,
+                  "lng" : 145.5125288
+               },
+               "southwest" : {
+                  "lat" : -38.4338593,
+                  "lng" : 144.5937418
+               }
+            },
+            "location" : {
+               "lat" : -37.8136276,
+               "lng" : 144.9630576
+            },
+            "location_type" : "APPROXIMATE",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -37.5112737,
+                  "lng" : 145.5125288
+               },
+               "southwest" : {
+                  "lat" : -38.4338593,
+                  "lng" : 144.5937418
+               }
+            }
+         },
+         "place_id" : "ChIJ90260rVG1moRkM2MIXVWBAQ",
+         "types" : [ "colloquial_area", "locality", "political" ]
+      }
+   ],
+   "status" : "OK"
+}
+</con:responseContent><con:header><con:name>X-Frame-Options</con:name><con:value>SAMEORIGIN</con:value></con:header><con:header><con:name>Cache-Control</con:name><con:value>public, max-age=86400</con:value></con:header><con:header><con:name>Server</con:name><con:value>mafe</con:value></con:header><con:header><con:name>Access-Control-Allow-Origin</con:name><con:value>*</con:value></con:header><con:header><con:name>Vary</con:name><con:value>Accept-Language</con:value></con:header><con:header><con:name>Expires</con:name><con:value>Thu, 16 Aug 2018 00:50:39 GMT</con:value></con:header><con:header><con:name>X-XSS-Protection</con:name><con:value>1; mode=block</con:value></con:header><con:header><con:name>Date</con:name><con:value>Wed, 15 Aug 2018 00:50:39 GMT</con:value></con:header></con:response></con:restMockAction>
